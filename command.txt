@@ -1,0 +1,11 @@
+git config --global user.name Eduardo12Viegas
+git config --global user.email eduardo.viegas@etec.sp.gov.br
+
+npx create-expo-app@latest StickerSmash
+
+
+
+npm run reset-project
+n
+
+npx expo start --localhost --android
