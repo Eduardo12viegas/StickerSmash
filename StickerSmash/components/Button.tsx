@@ -5,16 +5,17 @@ import { ImageBackground } from "expo-image";
 type Props = {
   label: string;
   theme?: 'primary';
+  onPress?: () => void;
 };
 
-export default function Button({ label, theme }: Props) {
+export default function Button({ label, theme, onPress }: Props) {
   if (theme === 'primary') {
     return (
       <View style={[styles.buttonContainer, 
       {borderWidth: 4, borderColor: '#ffd33d, borderRadius: 18'}
       ]}>
         <Pressable style={[styles.button, ImageBackground "#fff"]} 
-        onPress={() => alert("AHHHHHHHH")}>
+        onPress={onPress}>
 
           <FontAwesome name="picture-o"
            size={18}
@@ -23,7 +24,8 @@ export default function Button({ label, theme }: Props) {
 
 
           <Text style={[styles.buttonLabel, {color: "#25292e" }]}>
-            {label}</Text>
+            {label}
+          </Text>
         </Pressable>
       </View>
     );
