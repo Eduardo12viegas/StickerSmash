@@ -3,12 +3,15 @@ import { View, StyleSheet } from "react-native";
 import ImageViewer from "@/components/ImageViewer";
 import Button from "@/components/Button";
 import * as ImagePicker from "expo-image-picker";
+import { type ImageSource } from 'expo-image'
+import EmojiList from "@/components/EmojiList";
+
 
 const PlaceholderImage = require("@/assets/images/background-image.png");
 
 export default function Index() {
-  const [selectedImage, setSelectImage] = useState<string | undefined>(
-    undefined
+  const [selectedImage, setSelectImage] = useState<string | undefined>(undefined
+  
   );
 
 const [showAppOptions, setshowAppOptions,] = useState<boolean>(false);
